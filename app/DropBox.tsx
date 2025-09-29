@@ -27,7 +27,7 @@ export default function DropBox() {
             isDragActive ? "bg-blue-100 border-blue-500" : "bg-gray-50"
             }`}
         >
-            <input {...getInputProps()} {...({ webkitdirectory: true } as any)} />
+            <input {...getInputProps()} webkitdirectory />
             {isDragActive ? <p>Drop the folder/files here ...</p> : <p>Drag & drop a folder here, or click to select</p>}
         </div>
 
