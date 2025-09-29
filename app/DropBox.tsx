@@ -27,8 +27,8 @@ export default function DropBox() {
             isDragActive ? "bg-blue-100 border-blue-500" : "bg-gray-50"
             }`}
         >
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-            <input {...getInputProps()} {...{webkitdirectory:true}as any}/>
+          {/* @ts-expect-error Webkitdir is not a type in HTML INPUT in TS as it is a part of browser */}
+            <input {...getInputProps()} webkitdirectory="true"/>
             {isDragActive ? <p>Drop the folder/files here ...</p> : <p>Drag & drop a folder here, or click to select</p>}
         </div>
 
