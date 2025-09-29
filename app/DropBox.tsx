@@ -33,7 +33,7 @@ export default function DropBox() {
             isDragActive ? "bg-blue-100 border-blue-500" : "bg-gray-50"
             }`}
         >
-          {/* @ts-ignore */}
+          {/* @ts-expect-error Webkitdir is not a type in TS*/}
             <input {...getInputProps()} webkitdirectory="true"/>
             {isDragActive ? <p>Drop the folder/files here ...</p> : <p>Drag & drop a folder here, or click to select</p>}
         </div>
