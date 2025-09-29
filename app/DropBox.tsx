@@ -18,6 +18,12 @@ export default function DropBox() {
   const clearFiles = () => {
     setFilesList([]);
   }
+
+  const formData = new FormData();
+  filesList.forEach(file => {
+    formData.append("files", file, file.webkitRelativePath);
+  });
+
   return (
     <>
         <div className="mb-7 lg:p-6 p-3 border-2 border-dashed border-gray-600 rounded-lg w-full lg:max-w-md max-w-2xs mx-auto mt-10">
