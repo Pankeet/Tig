@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Inter , Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import Button from "@/components/ui/Button";
 import "./globals.css";
-import { Component } from "react";
 
 export const metadata: Metadata = {
   title: "Tig- Where your code writes its own story",
